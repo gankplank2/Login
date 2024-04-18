@@ -1,0 +1,462 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+/*--------------VARIABLES GLOBALES--------------------*/
+:root{
+    --body-color: rgb(44, 43, 44);
+    --color-white: rgb(0, 0, 0);
+
+    --text-color-second: rgb(200, 252, 15);
+    --text-color-third: rgb(255, 0, 0);
+
+    --first-color: rgb(253, 8, 8);
+    --first-color-hover: rgb(255, 0, 0);
+
+    --second-color: rgb(255, 0, 0);
+    --third-color: yellow;
+    --first-shadow-color: rgb(255, 0, 0);
+}
+
+/*--------------BASE--------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Madimi', sans-serif;
+}
+body{
+    background: var(--body-color);
+}
+.container{
+    width: 100%;
+    position: relative;
+}
+/*----------------------------- GLOBAL BUTTON DESIGN ------------------------------------------*/
+.btn{
+    font-weight: 500;
+    padding: 12px 20px;
+    background: rgb(255, 0, 0);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+.btn>i{
+    margin-left: 16px;
+}
+.btn:hover{
+    background: var(--second-color);
+    color: var(--color-white);
+}
+/*----------------------------- GLOBAL ICONS DESIGN ------------------------------------------*/
+i{
+    font-size: 16px;
+}
+.BtnHamburger{
+    font-size: 58px;
+}
+/*----------------------------- NAVIGATION BAR ------------------------------------------*/
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    background: rgb(0, 0, 0);
+    padding-inline: 9vw;
+    transition: .3s;
+    z-index: 100;
+}
+.nav-logo{
+    position: relative;
+}
+.nav-name{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-color-third);
+}
+.nav-logo span{
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    font-size: 5em;
+    color: rgb(250, 250, 250);
+}
+.nav-menu, .nav_menu_list{
+    display: flex;
+}
+.nav-name, .nav_list{
+    list-style: none;
+    position: relative;
+}
+.nav-link{
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+    font-weight: 500;
+    padding-inline: 15px;
+    margin-inline: 20px;
+}
+.nav-menu-btn{
+    display: none;
+}
+.nav-menu-btn{
+    font-size: 28px;
+    cursor: pointer;
+}
+.active-link{
+    position: relative;
+    color: var(--first-color);
+    transition: .3s;
+}
+.active-link::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translate(-50%,-50%);
+    width: 5px;
+    height: 5px;
+    background: rgb(255, 0, 0);
+    border-radius: 50%;
+}
+/*----------------------------- WRAPPER DESING ------------------------------------------*/
+.wrapper{
+    height: 150vh;
+}
+/*----------------------------- FEATURED BOX ------------------------------------------*/
+.featured-box{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    min-height: 700px;
+}
+/*----------------------------- FEATURED TEXT BOX ------------------------------------------*/
+.featured-text{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 80vh;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+}
+.featured-text, p{
+    color: rgb(245, 245, 245);
+}
+.featured-text-card span{
+    background-color: #ff0000;
+    color:black;
+    padding: 15px 10px;
+    font-size: 13px;
+    border-radius: 50px;
+}
+.featured-name{
+    font-size: 50px;
+    font-weight: 600;
+    margin-block: 20px;
+}
+.typedText{
+    text-transform: capitalize;
+    color: var(--text-color-third);
+    font-style: italic;
+}
+.featured-text-info{
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: black;
+}
+.featured-text-btn{
+    color:black;
+    display: flex;
+    gap: 30px;
+}
+.featured-text-btn>.blue-btn{
+    color: rgb(247, 247, 247);
+    background: var(--first-color);
+    color: var(--color-white);
+}
+.featured-text-btn>.blue-btn:hover{
+    background: var(--first-color-hover);
+}
+/*----------------------------- FEATURED IMAGE BOX ------------------------------------------*/
+.featured-image{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 80vh;
+    width: 50%;
+}
+.image{
+    margin: auto 0;
+    width: 380px;
+    height: 380px;
+    border-radius: 55% 45% 55% 45%;
+    overflow: hidden;
+    animation: imgFloat 7s ease-in-out infinite;
+}
+.image img{
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+}
+@keyframes imgFloat {
+    50%{
+        transform: translateY(10px);
+        border-radius: 45% 55% 45% 55%;
+    }
+    
+}
+/*----------------------------- MAIN BOX ------------------------------------------*/
+.section{
+    padding-block: 5em;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+}
+.col{
+    display: flex;
+    width: 50%;
+    color: #ff0000;
+}
+/*----------------------------- REUSABLE CSS ------------------------------------------*/
+.top-header{
+    text-align: center;
+    margin-bottom: 5em;
+}
+.top-header h1{
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+}
+/*----------------------------- ABOUT INFO ------------------------------------------*/
+.about-info p {
+    color: rgb(255, 255, 255);
+}
+.about-info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 30px 70px;
+    padding-inline: 20px;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+}
+.about-info p {
+    text-align: center;
+    font-size: 15px;
+    color: #ff0000;
+}
+
+.about-info button{
+    position: absolute;
+    right: 20px;
+    left: 20px;
+    background-color: var(--first-color);
+    color: var(--color-white);
+    border-radius: 30px;
+}
+.about-btn:hover{
+    color: var(--first-color-hover);
+}
+/*---------------------About info/skills Box-------------------------*/
+.skills-box{
+    margin: 15px;
+    align-items: center;
+}
+.skills-header{
+    margin-bottom:  25px;
+}
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4.5px;
+}
+.skills-list span{
+    font-size: 10px;
+    background: rgb(255, 1, 1);
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin: 3px;
+}
+/*-----------------------SECCTION PROJECTS---------------*/
+.project-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.project-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 250px;
+    background: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 1px 8px 10px 2px rgb(255, 0, 0);
+    overflow: hidden;
+}
+.project-box>i{
+    font-size:  50px;
+    color:var(--second-color);
+    margin-bottom: 25px;
+}
+.project-box::after, .contac-info::after{
+content: " ";
+position: absolute;
+bottom: 100%;
+background-color: rgb(255, 0, 0);
+width: 100%;
+height: 100%;
+transition: .4s;
+z-index: 1;
+}
+
+.project-box:hover.project-box::after{
+    bottom: 0;
+}
+.project-box:hover.project-box i,
+.project-box:hover.project-box>h3,
+.project-box:hover,.project-box>label{
+    color: rgba(255, 0, 0, 0.945) ;
+    z-index:2;
+}
+/*----------------------------------CONTACT BOX---------------------------------------------------*/
+.contact-info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    width: 100%;
+    height: 315px;
+    background-color: rgb(0, 0, 0) ;
+    border-radius: 15px;
+    box-shadow: 1px 8px 10px 2px rgb(3, 3, 3) ;
+    overflow: hidden;
+}
+/*contac from*/
+.form-control{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+}
+.form-inpud{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+    .input-field{
+        width: 50%;
+        height: 55px;
+        background: transparent;
+        border-radius: 15px;
+        border:  2px solid #aaa;
+        padding: 20px;
+        outline: none;
+    }
+    .textarea{
+        width: 100%;
+        height: 250px;
+        border-radius: 15px;
+        border:  2px solid #aaa;
+        outline: none;
+        resize: none;
+
+    }
+    .form-button>.btn{
+        display: flex;
+        align-items: center;
+        background: var(--second-color);
+        color:  var(--color-white);
+    }
+    .about-btn>:hover{
+        background: rgb(247, 247, 247);
+
+    }
+    .form-button i{
+        font-size: 18px;
+        rotate: -45deg;
+    }
+    
+
+/*----------------------------- MEDIA QUERY == 900PX / RESPONSIVE ------------------------------------------*/
+@media only screen and (max-width: 900px) {
+    .nav-button{
+        display: none;
+    }
+    .nav-menu.responsive{
+        left: 0;
+    }
+    .nav-menu{
+        position: fixed;
+        top: 80px;
+        left: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(0, 0, 0);
+        backdrop-filter: blur(20px);
+        width: 100%;
+        min-height: 450px;
+        height: 90vh;
+        transition: .3s;
+    }
+    .nav_menu_list{
+        flex-direction: column;
+    }
+    .nav-menu-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ff0000;
+    }
+}
+.featured-box{
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+.featured-text{
+    width: 100%;
+    order: 2;
+    justify-content: center;
+    align-content: flex-start;
+    min-height: 60vh;
+}
+.featured-image{
+    order: 1;
+    justify-content: center;
+    min-height: 150px;
+    width: 100%;
+    margin-top: 65px;
+}
+.image, .image img{
+    width: 150px;
+    height: 150px;
+}
+.h1{
+    color: #ffffff;
+}
+.BtnHamburger{
+    color: #ff0000;
+}

@@ -1,0 +1,68 @@
+:root{
+    --body-color: rgb(44, 43, 44);
+    --color-white: rgb(252, 252, 252);
+
+    --text-color-second: #fff0;
+    --text-color-third: rgb(186, 25, 235);
+
+    --first-color: rgb(180, 14, 180);
+    --first-color-hover: blue;
+
+    --second-color: rgb(226, 239, 245);
+    --third-color: yellow;
+    --first-shadow-color: rgb(196, 58, 58);
+}
+body{
+    background: var(--body-color);
+
+}
+h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(252, 0, 0);
+    font-style: italic;
+    
+}
+label{
+    color: rgb(247, 9, 9);
+    
+   
+}
+a{
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+}
+.featured-image{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-content: right;
+    min-height: 100vh;
+    
+ 
+}
+.row{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    gap: 50px;
+   
+   
+}
+.col{
+    display: flex;
+    justify-content: right;
+  
+    color: #fffdfd;
+}
+.Formulario-Ingresar{
+    justify-content: left;
+}
+
+/*inde (el de cerrar sesion*/
+input{
+    color: rgb(255, 0, 0);
+background-color: rgba(255, 255, 255, 0.897);
+font-size: medium;
+
+}
